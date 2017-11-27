@@ -190,6 +190,7 @@ function SchemaFieldRender(props) {
   if (uiSchema["ui:field"]) {
     displayLabel = false;
     fieldErrorSchema = errorSchema;
+    __errors = [];
   }
 
   // See #439: uiSchema: Don't pass consumed class names to child components
