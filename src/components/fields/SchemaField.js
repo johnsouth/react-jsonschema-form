@@ -186,11 +186,11 @@ function SchemaFieldRender(props) {
   if (schema.type === "boolean" && !uiSchema["ui:widget"]) {
     displayLabel = false;
   }
+  let { __errors, ...fieldErrorSchema } = errorSchema;
   if (uiSchema["ui:field"]) {
     displayLabel = false;
+    fieldErrorSchema = errorSchema;
   }
-
-  const { __errors, ...fieldErrorSchema } = errorSchema;
 
   // See #439: uiSchema: Don't pass consumed class names to child components
   const field = (
